@@ -1,0 +1,85 @@
+﻿@using Microsoft.AspNetCore.Identity
+@*@using ShoppingCart.Areas.Identity.Data*@
+
+@model ShoppingCart.Models.ItemCategoryViewModel
+
+@*@inject SignInManager<ApplicationUser> SignInManager*@
+
+@{
+    Layout = "_Layout";
+}
+
+@{
+    ViewData["Title"] = "Products List";
+}
+
+<div class="search-bottom">
+    @*here the get command gives a the search query in the link*@
+    <form asp-controller="Items" asp-action="Index" method="get">
+        <p>
+            <div class="sidenav">
+                @foreach (var category in ViewBag.category)
+                {
+                    <input class="category-filter no-outline" type="submit" asp-for="ItemCategory" value=@category /><br />
+                }
+            </div>
+            
+        
+
+            @*When filtered SearchString equals the given value in the input field*@
+        <div class="title-search">
+            <input class="title-search-input no-outline" placeholder="Search product name" type="text" name="SearchString" />
+            <input class="filter no-outline" type="submit" value=""/>
+            <i class="fas fa-search"></i>
+        </div>
+        
+        </p>
+    </form>
+    <br />
+</div>
+
+<div class="main">
+    @foreach (var category in ViewBag.category)
+    {
+        <br />
+        @foreach (var item in Model.Items)
+        {
+            @if (category == item.Category)
+            {
+                <h5>Category @category</h5>
+                <hr />
+                break;
+            }
+        }
+        <div class="container">
+            <div class="row h-200">
+                @foreach (var item in Model.Items)
+                {
+                    @if (category == item.Category)
+                    {
+
+                        <div class="col-3">
+
+                            <div class="product-card card-border card-border-success shadow-0 mb-3 text-center" style="width: 10rem">
+                                <div class="card-body">
+                                    <h7 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h7>
+                                    <img class="mx-auto d-block" src="~/images/@item.ImageName"
+                                         height="100" width="100" />
+                                    <br />
+                                    <p class="font-weight-bold">
+                                        Rs.@Html.DisplayFor(modelItem => item.Price)
+                                    </p>
+                                    <a class="add-to-cart-btn add-to-cart-btn-outline-success" asp-controller="MyCartItems" asp-action="AddtoCart" asp-route-id="@item.Id">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+
+                }
+
+            </div>
+        </div>
+    }
+</div>
+

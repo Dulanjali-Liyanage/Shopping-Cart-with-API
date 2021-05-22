@@ -1,0 +1,77 @@
+﻿
+
+@{
+    ViewData["Title"] = "My Cart";
+}
+
+@{
+    var itemId = -99;
+    var itemName = "";
+}
+
+
+<form asp-controller="MyCartItems" asp-action="BuyNow">
+    <div class="form-group">
+        <input type="submit" value="Buy" class="btn btn-primary" />
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>
+                Title
+            </th>
+
+            <th>
+                Price
+            </th>
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @{ if (ViewBag.cart != null)
+            {
+                @foreach (var item in ViewBag.cart)
+                {
+                    itemId = item.Id;
+                    itemName = item.Title;
+                    <tr>
+                        <td>
+                            <img src="~/images/@item.ImageName"
+                                 height="80" width="80" />
+                        </td>
+                        <td>
+                            @item.Title
+                        </td>
+
+                        <td>
+                            @item.Price
+                        </td>
+
+                        <td>
+                            @*<a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                            </a>*@
+                            <button type="button" class="btn btn-danger" data-toggle="ajax-modal" data-target="#mycartitemdeletemodal" data-url="@Url.Action($"Delete/{item.Id}")">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                            </button>
+                            
+                        </td>
+                    </tr>
+                }
+            }
+
+        }
+        <tr>
+            <td class="text-center" colspan="2">Total Price</td>
+            <td>@ViewBag.total</td>
+            <td></td>
+        </tr>
+
+    </tbody>
+</table>
+
+<div id="PlaceHolderHere"></div>

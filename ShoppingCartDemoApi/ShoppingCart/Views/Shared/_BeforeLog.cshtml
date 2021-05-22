@@ -1,0 +1,11 @@
+﻿
+<ul class="navbar-nav">
+    @if (GlobalVariables.webApiClient.DefaultRequestHeaders.Authorization == null)
+    {
+        <li class="nav-item">
+            <a  asp-controller="Authenticate" asp-action="Login">Login</a>  
+        </li>
+    }
+
+</ul>
+

@@ -1,0 +1,448 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  font-family: "Roboto", sans-serif;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+/*for tab control*/
+div.login-logout-tab div.card-header {
+    padding: 0px 0px 12px 0px;
+}
+
+div.login-logout-tab ul.nav-tabs {
+    margin: 0px 0px -12px 0px;
+}
+
+div.login-logout-tab li.nav-item {
+    width: 50%;
+}
+
+div.login-logout-tab a.nav-link {
+    font-size: 25px;
+    color: #495057;
+    text-align: center;
+}
+
+div.card-content {
+    padding: 10px 20px;
+}
+
+/*login form*/
+div.login-form-icon {
+    text-align: center;
+}
+
+
+
+.product-card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    
+}
+
+.product-card:hover {
+    box-shadow: 2px 2px 2px;
+    transform: scale(1.01);
+}
+
+.add-to-cart-btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight:bold;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .add-to-cart-btn {
+        transition: none;
+    }
+}
+
+.add-to-cart-btn:hover {
+    color: #212529;
+    text-decoration: none;
+}
+
+.add-to-cart-btn:focus, .input.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.add-to-cart-btn.disabled, .add-to-cart-btn:disabled {
+    opacity: 0.65;
+}
+
+a.add-to-cart-btn.disabled,
+fieldset:disabled a.add-to-cart-btn {
+    pointer-events: none;
+}
+
+.add-to-cart-btn-outline-success {
+    color: #f40339;
+    border-color: #f40339;
+}
+
+.add-to-cart-btn-outline-success:hover {
+    color: #fff;
+    background-color: #f40339;
+    border-color: #f40339;
+}
+
+.card-border {
+    border: 1px solid #dee2e6 !important;
+}
+
+.card-border-success {
+    border-color: #f40339 !important;
+}
+.title-search {
+    position: relative;
+}
+
+.title-search-input {
+    width: 950px;
+    padding: 0.5em;
+    padding-left: 2em;
+    border: 4px solid #f40339;
+    border-radius: 30px;
+    float: right;
+}
+
+.my-add-input {
+    width: 200px;
+    padding: 0.5em;
+    padding-left: 2em;
+    border: 4px solid #f40339;
+    border-radius: 30px;
+}
+
+.title-search i {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    color: gray;
+}
+
+.category-search-input {
+    width: 200px;
+    left: 400px;
+    padding: 0.5em;
+    border: none;
+    position:absolute;
+}
+
+.filter {
+    position: absolute;
+    width: 40px;
+    right: 15px;
+    top: 10px;
+    border-radius: 30px;
+    background: transparent;
+    border: none;
+}
+
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: absolute;
+    z-index: 1;
+    top: 60px;
+    left: 0;
+    background-color: #f6f6f7;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+}
+
+.search-bottom {
+    margin-bottom: 20px;
+}
+
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.category-filter {
+    width: 200px;
+    background: transparent;
+    border: none;
+    color: black;
+    text-align: center;
+    margin-bottom: 16px;
+    font-weight:bold;
+}
+
+.category-filter:hover {
+    color: #fff;
+    background-color: #f40339;
+    border-color: #f40339;
+}
+
+
+.edit-delete-btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.6rem;
+    font-weight: bold;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .edit-delete-btn {
+        transition: none;
+    }
+}
+
+.edit-delete-btn:hover {
+    color: #212529;
+    text-decoration: none;
+}
+
+.edit-delete-btn:focus, .edit-delete-btn.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.edit-delete-btn.disabled, .edit-delete-btn:disabled {
+    opacity: 0.65;
+}
+
+a.edit-delete-btn.disabled,
+fieldset:disabled a.edit-delete-btn {
+    pointer-events: none;
+}
+
+.edit-delete-btn-outline-success {
+    color: #f40339;
+    border-color: #f40339;
+}
+
+.edit-delete-btn-outline-success:hover {
+    color: #fff;
+    background-color: #f40339;
+    border-color: #f40339;
+}
+
+.no-outline:focus{
+    outline:none;
+}
+
+
+
+.modal-confirm {
+    color: #636363;
+    width: 400px;
+}
+
+    .modal-confirm .modal-content {
+        padding: 20px;
+        border-radius: 5px;
+        border: none;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .modal-confirm .modal-header {
+        border-bottom: none;
+        position: relative;
+    }
+
+    .modal-confirm h4 {
+        text-align: center;
+        font-size: 26px;
+        margin: 30px 0 -10px;
+    }
+
+    .modal-confirm .close {
+        position: absolute;
+        top: -5px;
+        right: -2px;
+    }
+
+    .modal-confirm .modal-body {
+        color: #999;
+    }
+
+    .modal-confirm .modal-footer {
+        border: none;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 13px;
+        padding: 10px 15px 25px;
+    }
+
+        .modal-confirm .modal-footer a {
+            color: #999;
+        }
+
+    .modal-confirm .icon-box {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+        border-radius: 50%;
+        z-index: 9;
+        text-align: center;
+        border: 3px solid #f15e5e;
+    }
+
+        .modal-confirm .icon-box i {
+            color: #f15e5e;
+            font-size: 46px;
+            display: inline-block;
+            margin-top: 13px;
+        }
+
+    .modal-confirm .btn, .modal-confirm .btn:active {
+        color: #fff;
+        border-radius: 4px;
+        background: #60c7c1;
+        text-decoration: none;
+        transition: all 0.4s;
+        line-height: normal;
+        min-width: 120px;
+        border: none;
+        min-height: 40px;
+        border-radius: 3px;
+        margin: 0 5px;
+    }
+
+    .modal-confirm .btn-secondary {
+        background: #c1c1c1;
+    }
+
+        .modal-confirm .btn-secondary:hover, .modal-confirm .btn-secondary:focus {
+            background: #a8a8a8;
+        }
+
+    .modal-confirm .btn-danger {
+        background: #f15e5e;
+    }
+
+        .modal-confirm .btn-danger:hover, .modal-confirm .btn-danger:focus {
+            background: #ee3535;
+        }
+
+.trigger-btn {
+    display: inline-block;
+    margin: 100px auto;
+}
+

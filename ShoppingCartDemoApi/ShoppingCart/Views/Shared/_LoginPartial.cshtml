@@ -1,0 +1,14 @@
+﻿<ul class="navbar-nav">
+@if (GlobalVariables.webApiClient.DefaultRequestHeaders.Authorization != null)
+{
+    <li class="nav-item">
+        <a id="manage" class="nav-link text-dark" title="Manage">Hello @LoggedUser.UserName!</a>
+    </li>
+    <li class="nav-item">
+        <form id="logoutForm" class="form-inline" asp-controller="Authenticate"asp-action="Logout" >
+            <button id="logout" type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+        </form>
+    </li>
+}
+
+</ul>

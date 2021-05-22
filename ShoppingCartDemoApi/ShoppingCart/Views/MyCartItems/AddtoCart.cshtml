@@ -1,0 +1,54 @@
+﻿@model ShoppingCart.Models.Item
+
+
+@{
+    ViewData["Title"] = "Add to Cart";
+}
+
+<h1>Add to Cart</h1>
+
+<h4>Item</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="MyCartItems" asp-action="ToCart">
+            <input type="hidden" asp-for="Id" />
+
+            <div class="form-group">
+                <input type="hidden" asp-for="ImageName" />
+                <img src="~/images/@Model.ImageName"
+                     height="100" width="100" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <div class="title-search">
+                    <input class="my-add-input no-outline" asp-for="Title"  readonly />
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Category" class="control-label"></label>
+                <div class="title-search">
+                    <input asp-for="Category" class="my-add-input no-outline" readonly />
+                </div>
+
+                </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <div class="title-search">
+                    <input asp-for="Price" class="my-add-input no-outline" readonly />
+                </div>
+
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Add to Cart" class="btn btn-primary" />
+                </div>
+</form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="Items" asp-action="Index">Back to List</a>
+</div>
